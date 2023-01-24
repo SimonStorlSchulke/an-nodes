@@ -1,0 +1,12 @@
+.connection .main-path {
+    fill: none;
+    stroke-width: 3px;
+    stroke: rgb(160, 160, 160);
+}
+
+.connection {
+    overflow: visible !important;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}

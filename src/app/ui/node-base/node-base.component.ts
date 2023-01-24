@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ui-node-base',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class NodeBaseComponent {
   name: string = "Node Name";
+  @Input() posX: number = 100;
+  @Input() posY: number = 100;
 }

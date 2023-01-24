@@ -1,4 +1,4 @@
-<div class="node-base">
+<div [style.top]="posY.toString()+'px'" [style.left]="posX.toString()+'px'" class="node-base">
     <div class="node-title">{{name}}</div>
     <div class="node-content">
         <ng-content></ng-content>

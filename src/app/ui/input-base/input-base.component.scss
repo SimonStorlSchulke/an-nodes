@@ -1,0 +1,41 @@
+
+.node-item, .node-output {
+    height: 38px;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.node-item span, .node-item input {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.socket {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(52, 250, 101);
+    outline: 1px solid rgba(0, 0, 0, 0.598);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.socket-in {
+    left: -22px;
+}
+.socket-out {
+    right: -15px;
+}
+.input-control {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+}
+

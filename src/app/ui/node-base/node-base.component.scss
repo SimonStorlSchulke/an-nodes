@@ -1,0 +1,24 @@
+
+.node-base {
+    background: #333;
+    width: 190px;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #0006;
+    position: relative;
+    top: 60px;
+    left: 120px;
+}
+
+.node-title {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(50, 101, 229);
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.node-content {
+    padding: 8px 8px 8px 14px;
+}

@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./node-base.component.scss']
 })
 export class NodeBaseComponent {
-  name: string = "Node Name";
+  @Input() name: string = "Node Name";
   @Input() posX: number = 100;
   @Input() posY: number = 100;
 }

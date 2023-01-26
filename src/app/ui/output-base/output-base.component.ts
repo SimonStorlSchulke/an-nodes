@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'ui-output-base',
@@ -7,4 +7,16 @@ import { Component, Input } from '@angular/core';
 })
 export class OutputBaseComponent {
   @Input() name: string = "Output Name";
+
+  @ViewChild('socket') socket!: ElementRef;
+
+  constructor(public elRef: ElementRef){}
+
+  //not working in socket-link-component. returns [undefined, undefined]..
+  getSocketPos(): number[] {
+    return [
+      (this.socket?.nativeElement.getBoundingClientRect().left),
+      (this.socket?.nativeElement.getBoundingClientRect().top),
+    ]
+  }
 }

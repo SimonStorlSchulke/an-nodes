@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, OnChanges, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'ui-input-base',
@@ -8,4 +8,17 @@ import { Component, Input } from '@angular/core';
 export class InputBaseComponent {
   @Input() name: string = "Input Name";
   @Input() defaultValue: any;
+
+  @Output() pos!: object;
+
+  @ViewChild('.socket') socket!: ElementRef;
+
+  constructor(public elRef: ElementRef) { }
+
+  getSocketPos(): number[] {
+    return [
+      (this.socket.nativeElement.getBoundingClientRect().left),
+      (this.socket.nativeElement.getBoundingClientRect().top),
+    ]
+  }
 }
